@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'great_vibesregular';
+    src: url('fonts/greatvibes/greatvibes-regular-webfont.woff2') format('woff2'),
+    
+	url('fonts/greatvibes/greatvibes-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'architects_daughterregular';
+    src: url('fonts/architexts/architectsdaughter-webfont.woff2') format('woff2'),
+    url('fonts/architexts/architectsdaughter-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	padding: 0px; 
+	margin: 0px;
+	min-width:350px;
+	background:#ffdab3; /*prend trop de temps à charger la page */
+	font-size:100%;
+	overflow-x:auto;
+	overflow : -moz-scrollbars-horizontal;
+}
+/*canvas {vertical-align: top;} */
+header, section, footer, aside, nav, main, article, figure { display: block;}
+/* pour assurer la compatibilité avec les anciens navigateurs */
+canvas {	
+	border:1px solid #000000;
+}
+header {	
+	height:110px;
+	color:red;
+}
+header h1{
+	font-size: 2.5em;
+}
+nav ul {
+	list-style-type:none;
+	margin:auto;
+	padding-left:0px;
+}
+nav ul li {
+	float:left;
+	width:100px;
+	text-align: center;
+	border: 1px solid black;
+	margin-left:5px;
+	background:#ffc299;
+}
+nav ul li a {
+display:block; 
+/*sert à colorer le block complet et non seulement le fond du mot lorsque le lien est survolé (a:hover)*/
+}
+nav a{
+	text-decoration:none;
+	font-weight:bold;
+}
+nav a:link, nav a:visited{
+	color:black;
+}
+nav a:hover{
+	color:red;
+	text-shadow:1px 1px gray;
+	background:#d4fecd;
+}
+section{
+	margin:5px;
+	
+}
+article {
+	font-family:architects_daughterregular, Arial, sans-serif;
+	display: inline;
+	position:absolute;
+	/*margin:5px;*/
+	padding:10px;
+	text-align:justify;
+	max-height:580px;
+	overflow:auto;
+}
+
+p.premierParagraphe{
+	margin-top:-5px;
+}
+p.premierParagraphe::first-letter{
+	font-family:great_vibesregular,"Trebuchet MS",sans-serif;
+	font-size:1.5em;
+	font-weight:bold;
+	color:red;
+	text-shadow:2px 1px gray;
+	letter-spacing:10px;
+	line-height:0.8;
+	background-color:lightblue;
+}
+
+#titre{	
+text-align:center;
+font-family:great_vibesregular,"Trebuchet MS",sans-serif;
+}
+
+#canvasAnim {
+	/*margin: 5px;*/
+	padding:0px;
+	width : 201px;
+	float:left;
+}
+.clearfix::after{
+	content: "";
+    clear: both;
+    display: table;
+}
